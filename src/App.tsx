@@ -1,4 +1,5 @@
 import Navbar from './Components/Navbar'
+import ToggleThemeBtn from './Components/ToggleTheme'
 import HomePage from './Pages/Home'
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
         <>
             <Navbar />
             <HomePage />
+            <ToggleThemeBtn />
         </>
     )
 }
