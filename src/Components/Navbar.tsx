@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const Nav = styled.nav<{ scrolled?: boolean }>`
     color: ${({ scrolled, theme }) => (scrolled ? theme.colors.text : theme.colors.primary)};
@@ -20,7 +20,7 @@ const Nav = styled.nav<{ scrolled?: boolean }>`
     @media (max-width: 426px) {
         display: none;
     }
-`
+`;
 
 const Title = styled.h1`
     font-size: 1.5rem;
@@ -46,7 +46,7 @@ const Title = styled.h1`
             transition: color 3s ease;
         }
     }
-`
+`;
 
 const ItemWrapper = styled.ul`
     display: flex;
@@ -54,7 +54,7 @@ const ItemWrapper = styled.ul`
     gap: 20px;
     margin: 0 2rem;
     color: ${({ theme }) => theme.colors.text};
-`
+`;
 
 const Item = styled.li`
     list-style-type: none;
@@ -74,21 +74,21 @@ const Item = styled.li`
         text-decoration: none;
         transition: color 3s ease;
     }
-`
+`;
 
 const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false)
+    const [scrolled, setScrolled] = useState(false);
 
     const handleScroll = () => {
-        setScrolled(window.scrollY > 1)
-    }
+        setScrolled(window.scrollY > 10);
+    };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         // TODO: Add links
@@ -113,7 +113,7 @@ const Navbar = () => {
                 </Item>
             </ItemWrapper>
         </Nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import { ReactNode } from 'react';
+import styled from 'styled-components';
 
 const PageWrapperStyle = styled.div`
     width: 80%;
@@ -16,18 +16,14 @@ const PageWrapperStyle = styled.div`
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
-`
+`;
 
 interface PageWrapperProps {
-  children: ReactNode;
+    children: ReactNode;
 }
 
-const PageWrapper: React.FC<PageWrapperProps> = ({children}) => {
-    return (
-        <PageWrapperStyle>
-            {children}
-        </PageWrapperStyle>
-    )
-}
+const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
+    return <PageWrapperStyle>{children}</PageWrapperStyle>;
+};
 
-export default PageWrapper
+export default PageWrapper;

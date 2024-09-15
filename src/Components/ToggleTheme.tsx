@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import { ThemeContext } from '../Contexts/ThemeContext'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { ThemeContext } from '../Contexts/ThemeContext';
 
 const ToggleThemeBtnOverlay = styled.div`
     position: fixed;
     bottom: 20px;
     left: 30px;
     z-index: 1000;
-`
+`;
 
 const Button = styled.button`
     padding: 1rem;
@@ -26,20 +26,20 @@ const Button = styled.button`
         scale: 1.1;
         background-color: gray;
     }
-`
+`;
 
-const LightBtn = styled(Button)``
+const LightBtn = styled(Button)``;
 
-const DarkBtn = styled(Button)``
+const DarkBtn = styled(Button)``;
 
 const ToggleThemeBtn: React.FC = () => {
-    const themeContext = useContext(ThemeContext)
+    const themeContext = useContext(ThemeContext);
 
     if (!themeContext) {
-        throw new Error('useTheme must be used within a ThemeProvider')
+        throw new Error('useTheme must be used within a ThemeProvider');
     }
 
-    const { theme, toggleTheme } = themeContext
+    const { theme, toggleTheme } = themeContext;
 
     return (
         <ToggleThemeBtnOverlay>
@@ -54,7 +54,7 @@ const ToggleThemeBtn: React.FC = () => {
                 </DarkBtn>
             )}
         </ToggleThemeBtnOverlay>
-    )
-}
+    );
+};
 
-export default ToggleThemeBtn
+export default ToggleThemeBtn;

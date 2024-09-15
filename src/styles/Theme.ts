@@ -32,7 +32,7 @@ const lightPalette = {
     error: '#dc3545',
     errorDarker: '#c82333',
     disabled: '#cccccc',
-}
+};
 
 const darkPalette = {
     background: '#2f2f2f',
@@ -67,7 +67,7 @@ const darkPalette = {
     error: '#dc3545',
     errorDarker: '#c82333',
     disabled: '#3e4044',
-}
+};
 
 const baseTheme = {
     typography: {
@@ -78,18 +78,18 @@ const baseTheme = {
         black: '0px 1px 5px 0px rgba(0, 0, 0, 0.5)',
         white: '0px 3px 5px 0px rgba(255, 255, 255, 0.75)',
     },
-}
+};
 
 export const lightTheme = {
     ...baseTheme,
     colors: {
         ...lightPalette,
     },
-}
+};
 
 export const darkTheme = {
     ...baseTheme,
     colors: {
         ...darkPalette,
     },
-}
+};
