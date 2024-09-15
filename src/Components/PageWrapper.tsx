@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 const PageWrapperStyle = styled.div`
@@ -6,9 +7,8 @@ const PageWrapperStyle = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    // align-items: center;
 
-
+    TODO: Change the background-color for the right color after tests
     // background-color: ${({ theme }) => theme.colors.shadeOne};
     background-color: #ff000030;
     color: ${({ theme }) => theme.colors.text};
@@ -18,7 +18,11 @@ const PageWrapperStyle = styled.div`
         color 0.3s ease;
 `
 
-const PageWrapper = ({children}) => {
+interface PageWrapperProps {
+  children: ReactNode;
+}
+
+const PageWrapper: React.FC<PageWrapperProps> = ({children}) => {
     return (
         <PageWrapperStyle>
             {children}
