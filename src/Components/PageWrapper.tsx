@@ -8,7 +8,7 @@ const PageWrapperStyle = styled.div`
     display: flex;
     flex-direction: column;
 
-    TODO: Change the background-color for the right color after tests
+    // TODO: Change the background-color for the right color after tests
     // background-color: ${({ theme }) => theme.colors.shadeOne};
     background-color: #ff000030;
     color: ${({ theme }) => theme.colors.text};
